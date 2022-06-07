@@ -1,6 +1,7 @@
 package com.example.templaterecyclerview;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -41,6 +42,7 @@ int avatars[]={
         R.drawable.stagiaire_010,
         R.drawable.stagiaire_011
 
+
 };
 /* Méthode d'initialisation des widgets*/
     private void  intUI(){
@@ -55,9 +57,13 @@ private void remplissageRecycler(){
     LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
 
     recyclerView.setLayoutManager(layoutManager);
+//Decoration
+    RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this,DividerItemDecoration.HORIZONTAL);
+recyclerView.addItemDecoration(itemDecoration);
 
 
 }
+/* Methodes du cycler*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
